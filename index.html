@@ -7,6 +7,9 @@
     <title>Get Pizza</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
+   
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
     
 <body>
   <div class="container">
@@ -16,24 +19,24 @@
                     <br>
                   <h1 class="text-center">Have your Pizza Delivered to your Doorstep</h1>
                   <br>
-                    <form>
+                    <form id="pizzas">
                       <h5 class="text-center">Choose the size of Pizza You want</h5>
                       <div class="row">
                           <div class="col">
                             <div class="form-check">
-                                    <input type="checkbox" class="small" id="smallpizza">
+                                    <input type="checkbox" class="small" name="size" value="small" id="smallpizza">
                                     <label class="form-check-label" for="small">Small Pizza</label>
                             </div>
                           </div>
                           <div class="col">
                                 <div class="form-check">
-                                        <input type="checkbox" class="medium" id="mediumpizza">
+                                        <input type="checkbox" class="medium" name="size" value="medium" id="mediumpizza">
                                         <label class="form-check-label" for="medium">Medium Pizza</label>
                                 </div>
                           </div>
                           <div class="col">
                                 <div class="form-check">
-                                        <input type="checkbox" class="large" id="largepizza">
+                                        <input type="checkbox" class="large" name="size" value="large" id="largepizza">
                                         <label class="form-check-label" for="large">Large Pizza</label>
                                 </div>
                           </div>
@@ -44,19 +47,19 @@
                       <div class="row">
                           <div class="col">
                             <div class="form-check">
-                                    <input type="checkbox" class="crispy" id="crispycrust">
+                                    <input type="checkbox" class="crispy" name="crust" value="crispy" id="crispycrust">
                                     <label class="form-check-label" for="small">Crispy</label>
                             </div>
                           </div>
                           <div class="col">
                                 <div class="form-check">
-                                        <input type="checkbox" class="stuffed" id="stuffedcrust">
+                                        <input type="checkbox" class="stuffed" name="crust" value="stuffed" id="stuffedcrust">
                                         <label class="form-check-label" for="medium">Stuffed</label>
                                 </div>
                           </div>
                           <div class="col">
                                 <div class="form-check">
-                                        <input type="checkbox" class="glutten" id="gluttencrust">
+                                        <input type="checkbox" class="glutten" name="crust" value="gluttenfree" id="gluttencrust">
                                         <label class="form-check-label" for="large">Glutten-free</label>
                                 </div>
                           </div>
@@ -67,19 +70,19 @@
                       <div class="row">
                           <div class="col">
                             <div class="form-check">
-                                    <input type="checkbox" class="pepperoni" id="peppe">
+                                    <input type="checkbox" class="pepperoni" name="toppings" value="pepperoni" id="peppe">
                                     <label class="form-check-label" for="small">Pepperoni</label>
                             </div>
                           </div>
                           <div class="col">
                                 <div class="form-check">
-                                        <input type="checkbox" class="mushroom" id="mush">
+                                        <input type="checkbox" class="mushroom" name="toppings" value="mushroom" id="mush">
                                         <label class="form-check-label" for="medium">mushroom</label>
                                 </div>
                           </div>
                           <div class="col">
                                 <div class="form-check">
-                                        <input type="checkbox" class="onions" id="on">
+                                        <input type="checkbox" class="onions" name="toppings" value="onions" id="on">
                                         <label class="form-check-label" for="large">Onions</label>
                                 </div>
                           </div>
@@ -98,60 +101,83 @@
                        </div>
                     </form>
                     <br>
-                    <div class="additional">
-                        <form>
-                            <div class="row ">
-                        
-                                    <div class="col">
-                                        <h5 class="text-center">how many would you like to order</h5>
-                                        <div class="form-check">
-                                                <input type="text" class="number" id="totalnumber" placeholder="enter the number of pizzas you want">
-                                                
-                                        </div>
+                    
+
+              </div>
+              <div class="col-4 piz">
+                <div id="orderdetails">
+                    <h5>You have ordered the following</h5>
+                    <p>Pizza Size: <span class="size"> </span></p>
+                    <p>Pizza Crust: <span class="crust"> </span></p>
+                    <p>Pizza Toppings: <span class="toppings"> </span></p>
+                    <p>The total charge for your Pizza is: <span class="totalcost"> </span></p>
+                
+                <form>
+                          <div class="row ">
+                    
+                                <div class="col">
+                                    <h6>how many?</h6>
+                                    <div class="form-check">
+                                            <input type="text" class="number" id="totalnumber" placeholder="">
+                                            
                                     </div>
+                                </div>
+                                
+                            </div>
+                            <div class="row">
                                     <div class="col">
-                                            <h5 class="text-center">To be Delivered?</h5>
+                                            <h6>To be Delivered?</h6>
                                             <div class="row">
                                                 <div class="col">
                                                     <div class="form-check">
                                                             <input type="checkbox" class="yes" id="y">
-                                                            <label class="form-check-label" for="large">Yes</label>
+                                                            <label class="form-check-label" for="large" style="color:#212529">Yes</label>
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="form-check">
                                                             <input type="checkbox" class="no" id="n">
-                                                            <label class="form-check-label" for="large">No</label>
+                                                            <label class="form-check-label" for="large" style="color: #212529;">No</label>
                                                     </div>
                                                 </div>
-
+    
                                             </div>
                                             
                                         </div>
-                                </div>
-                                <div class="row">
-                                        <div class="col">
-                                            
-                                        </div>
-                                        <div class="col">
-                                         <button type="submit" class="btn btn-primary">Checkout</button>
-                                        </div>
-                                        <div class="col">
-            
-                                        </div>
-                                </div>
-                        </form>
-                    </div>
+                            </div>
+                            <div class="row">
+                                    <div class="col">
+                                        
+                                    </div>
+                                    <div class="col">
+                                     <button type="submit" class="btn btn-primary">Checkout</button>
+                                    </div>
+                                    <div class="col">
+        
+                                    </div>
+                            </div>
+                    </form>
+                </div>
+                
+              </div>
+      </div><br><br>
+      <div class="row">
+          <div class="col">
 
-              </div>
-              <div class="col-4 piz">
-                  <img src="img/american-1239091_1920.png" alt="" style="max-height: 500px;" class="img-responsive">
-              </div>
+          </div>
+          <div class="col"> 
+             <p class="text-center">&copy CollinsBett</p>  
+          </div>
+          <div class="col">
+
+          </div>
       </div>
   </div>  
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/script.js"></script>
+  
+  
+  
+  
+  
  
 
 </body>
