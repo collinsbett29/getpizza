@@ -1,0 +1,27 @@
+body{
+    background-image: url("../img/bg.jpg");
+    
+}
+p{
+    color:#ffffff;
+
+}
+h1{
+    color:#ffffff;
+
+}
+label{
+    color:#ffffff;  
+}
+.text-muted{
+    color:#ffffff !important;  
+
+}
+
+h5{
+    color:orange;
+
+}
+.piz{
+    margin-top: 8%;
+}
