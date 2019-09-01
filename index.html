@@ -117,7 +117,7 @@
                     
                                 <div class="col">
                                     <h6>how many?</h6>
-                                    <div class="form-check">
+                                    <div class="form-group">
                                             <input type="text" class="number" id="totalnumber" placeholder="">
                                             
                                     </div>
@@ -126,21 +126,34 @@
                             </div>
                             <div class="row">
                                     <div class="col">
-                                            <h6>To be Delivered?</h6>
+                                            <h6>Check if you want deliver otherwise leave unchecked</h6>
                                             <div class="row">
-                                                <div class="col">
-                                                    <div class="form-check">
-                                                            <input type="checkbox" class="yes" id="y">
-                                                            <label class="form-check-label" for="large" style="color:#212529">Yes</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="form-check">
-                                                            <input type="checkbox" class="no" id="n">
-                                                            <label class="form-check-label" for="large" style="color: #212529;">No</label>
-                                                    </div>
-                                                </div>
-    
+
+                                                <script>
+                                                    function valueChanged()
+                                                        {
+                                                            if($('.deliver').is(":checked"))   
+                                                                $(".answer").show();
+                                                            else
+                                                                $(".answer").hide();
+                                                        }
+                                                
+                                                </script>
+                                                    <div class="col">
+                                                            <div class="form-check">
+                                                                    <input type="checkbox" class="deliver" name="deliver" value="deliver" id="on" onchange="valueChanged()">
+                                                                    <label class="form-check-label" for="large">have it delivered</label>
+                                                            </div>
+                                                      </div>
+                                            </div>
+                                            <div class="row">
+                                                    <div class="col">
+                                                            <div class="form-group answer">
+                                                                    <input type="text" class="delivery" name="delivery" placeholder="enter your address" id="delivery">
+                                                            </div>
+                                                      </div>
+
+
                                             </div>
                                             
                                         </div>
