@@ -2,10 +2,7 @@ body{
     background-image: url("../img/bg.jpg");
     
 }
-p{
-    color:#ffffff;
 
-}
 h1{
     color:#ffffff;
 
@@ -23,5 +20,15 @@ h5{
 
 }
 .piz{
+    background: #ffffff !important;
     margin-top: 8%;
+}
+.additional{
+    display: none;
+}
+h6{
+    color: #007bff;
+}
+#orderdetails{
+    display: none;
 }
