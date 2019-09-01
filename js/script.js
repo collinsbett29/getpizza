@@ -35,6 +35,8 @@ $(document).ready(function() {
         var inputtedpizzaSize = $("input[name=size]:checked").val();
         var inputtedpizzaCrust = $("input[name=crust]:checked").val();
         var inputtedpizzaToppings = $("input[name=toppings]:checked").val();
+        var inputtedpizzaNumber = $("input#totalnumber").val();
+        var inputteddeliveryAddress = $("input#delivery").val();
         
         var newPizza = new Pizza(inputtedpizzaSize, inputtedpizzaCrust, inputtedpizzaToppings);
         
@@ -49,10 +51,11 @@ $(document).ready(function() {
             
   
           }
+          
 
         });
 
-        
+      
 
 
     });
