@@ -1,6 +1,6 @@
 # getpizza
-Have your Pizza Delivered to Your Doorstep
-Follow the steps below in order to have your pizza delivered:
+-Have your Pizza Delivered to Your Doorstep
+-Follow the steps below in order to have your pizza delivered:
 
 * Choose the size of pizza you want e.g Small, Medium, Large
 * Choose what kind of crust you would like the pizza to have e.g Crispy, Stuffed, Glutten-free
